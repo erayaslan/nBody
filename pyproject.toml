@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nbody"
+version = "v0.0.5"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "ffmpeg",
+  "vpython",
+]
+requires-python = ">= 3.11"
+authors = [
+  {name = "Gabriel S. Cabrera", email = "gabric@uio.no"}
+]
+description = "GPU-accelerated N-Body particle simulator with visualizer"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["nBody", "Visualization", "Physics"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Scientific/Engineering :: Visualization",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+gui = ["cupy"]
+
+[project.urls]
+Repository = "https://github.com/GabrielSCabrera/nBody"
+Issues = "https://github.com/GabrielSCabrera/nBody/issues"
+
+[tool.setuptools]
+packages = ["nbody", "nbody.core", "nbody.lib", "nbody.utils", "nbody.config"]
