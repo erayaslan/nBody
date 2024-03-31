@@ -100,8 +100,8 @@ venv.bak/
 /site
 
 # saved files
-/saved
-/animations
+saved/
+animations/
 test.py
 
 # mypy

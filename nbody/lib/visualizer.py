@@ -158,11 +158,9 @@ def _animate_2D(system, savename = None):
         if not os.path.isdir("animations"):
             os.mkdir("animations")
         # Setting the video background to black
-        savefig_kwargs = {'facecolor':fig.get_facecolor(),
-                          'repeat':True}
+        savefig_kwargs = {'facecolor':fig.get_facecolor()}
         # Video metadata
-        metadata = {"title":"Particle Simulation",
-                    "artist":"Gabriel S Cabrera",
+        metadata = {"title":"nBody Simulation",
                     "copyright":"GNU General Public License v3.0",
                     "comment":f"Number of spheres: {system.N:d}"}
 
